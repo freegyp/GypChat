@@ -19,7 +19,7 @@ enum LoginRegViewModelExceptions:Error{
 class LoginRegisterViewModel:ObservableObject{
     @Published var isLoggedIn:Bool
     
-    var handle:AuthStateDidChangeListenerHandle?
+    private var handle:AuthStateDidChangeListenerHandle?
     
     init() {
         defer {
@@ -84,3 +84,11 @@ class LoginRegisterViewModel:ObservableObject{
         })
     }
 }
+
+protocol LoginRegisterViewModelProtocol:AnyObject {
+    var isLoggedIn:Bool{get set}
+    func signIn(with email:String,password:String,completion:((Bool,String)->Void)?) throws
+    func register(with email:String,pwd:String,pwdConfirm:String,completion:((Bool,String)->Void)?) throws
+}
+
+extension LoginRegisterViewModel:LoginRegisterViewModelProtocol{}

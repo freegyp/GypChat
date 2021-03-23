@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var loginRegModel:ViewModelMockable<LoginRegisterViewModel> = ViewModelMockable(LoginRegisterViewModel())
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        if loginRegModel.model.isLoggedIn{
+            Text("Hello, view under construction!")
+        }else{
+            LoginRegisterViewPub(model: loginRegModel)
+        }
     }
 }
 
