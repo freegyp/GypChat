@@ -3,16 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16F32389D387041C51DBE794 /* Pods_GypChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F379F24FFFAC75C1C950E6 /* Pods_GypChatTests.framework */; };
 		A68671462608D98A00CF31D1 /* GypChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68671452608D98A00CF31D1 /* GypChatApp.swift */; };
 		A68671482608D98A00CF31D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68671472608D98A00CF31D1 /* ContentView.swift */; };
 		A686714A2608D99100CF31D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A68671492608D99100CF31D1 /* Assets.xcassets */; };
 		A686714D2608D99100CF31D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A686714C2608D99100CF31D1 /* Preview Assets.xcassets */; };
-		A68671582608D99100CF31D1 /* GypChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68671572608D99100CF31D1 /* GypChatTests.swift */; };
 		A68671632608D99200CF31D1 /* GypChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68671622608D99200CF31D1 /* GypChatUITests.swift */; };
+		A68671742608DA0300CF31D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A68671732608DA0300CF31D1 /* GoogleService-Info.plist */; };
+		A68671962608DCA400CF31D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68671952608DCA400CF31D1 /* AppDelegate.swift */; };
+		A686725A2609AA7100CF31D1 /* LoginRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68672592609AA7100CF31D1 /* LoginRegisterViewModel.swift */; };
+		A68672642609BC3300CF31D1 /* LoginRegisterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68672632609BC3300CF31D1 /* LoginRegisterViewModelTests.swift */; };
+		B006DA166FE874F80E2EC988 /* Pods_GypChat_GypChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE18949C6BA606A0F5CE36BB /* Pods_GypChat_GypChatUITests.framework */; };
+		E81A3C880E22D4AE7E9C1A30 /* Pods_GypChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7B5F4C155FE121C504B2FF /* Pods_GypChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		253300867BC80B7A5FB9EC5C /* Pods-GypChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GypChat.release.xcconfig"; path = "Target Support Files/Pods-GypChat/Pods-GypChat.release.xcconfig"; sourceTree = "<group>"; };
+		5C718A0F1B5E4DD558FFA4FD /* Pods-GypChat-GypChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GypChat-GypChatUITests.release.xcconfig"; path = "Target Support Files/Pods-GypChat-GypChatUITests/Pods-GypChat-GypChatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9184F91A2F2B3D3B94B0A014 /* Pods-GypChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GypChatTests.release.xcconfig"; path = "Target Support Files/Pods-GypChatTests/Pods-GypChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		9CC4713F606DDA9D8849CE4A /* Pods-GypChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GypChatTests.debug.xcconfig"; path = "Target Support Files/Pods-GypChatTests/Pods-GypChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A4F379F24FFFAC75C1C950E6 /* Pods_GypChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GypChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A68671422608D98A00CF31D1 /* GypChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GypChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A68671452608D98A00CF31D1 /* GypChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GypChatApp.swift; sourceTree = "<group>"; };
 		A68671472608D98A00CF31D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,11 +51,19 @@
 		A686714C2608D99100CF31D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A686714E2608D99100CF31D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A68671532608D99100CF31D1 /* GypChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GypChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A68671572608D99100CF31D1 /* GypChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GypChatTests.swift; sourceTree = "<group>"; };
 		A68671592608D99100CF31D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A686715E2608D99200CF31D1 /* GypChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GypChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A68671622608D99200CF31D1 /* GypChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GypChatUITests.swift; sourceTree = "<group>"; };
 		A68671642608D99200CF31D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A68671732608DA0300CF31D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A68671952608DCA400CF31D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A68672592609AA7100CF31D1 /* LoginRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewModel.swift; sourceTree = "<group>"; };
+		A68672632609BC3300CF31D1 /* LoginRegisterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewModelTests.swift; sourceTree = "<group>"; };
+		A6E1287E2609C90900B26760 /* GypChatTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GypChatTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		AA7B5F4C155FE121C504B2FF /* Pods_GypChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GypChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE18949C6BA606A0F5CE36BB /* Pods_GypChat_GypChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GypChat_GypChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D89752DC5453C0D3C5D274B8 /* Pods-GypChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GypChat.debug.xcconfig"; path = "Target Support Files/Pods-GypChat/Pods-GypChat.debug.xcconfig"; sourceTree = "<group>"; };
+		F06719A7EFF5044AF084ADBD /* Pods-GypChat-GypChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GypChat-GypChatUITests.debug.xcconfig"; path = "Target Support Files/Pods-GypChat-GypChatUITests/Pods-GypChat-GypChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E81A3C880E22D4AE7E9C1A30 /* Pods_GypChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F32389D387041C51DBE794 /* Pods_GypChatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +87,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B006DA166FE874F80E2EC988 /* Pods_GypChat_GypChatUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6566EBDE46ACC7915A71CF79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA7B5F4C155FE121C504B2FF /* Pods_GypChat.framework */,
+				AE18949C6BA606A0F5CE36BB /* Pods_GypChat_GypChatUITests.framework */,
+				A4F379F24FFFAC75C1C950E6 /* Pods_GypChatTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A68671392608D98900CF31D1 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +111,8 @@
 				A68671562608D99100CF31D1 /* GypChatTests */,
 				A68671612608D99200CF31D1 /* GypChatUITests */,
 				A68671432608D98A00CF31D1 /* Products */,
+				E77B07C8396C605E5145D67C /* Pods */,
+				6566EBDE46ACC7915A71CF79 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,11 +129,15 @@
 		A68671442608D98A00CF31D1 /* GypChat */ = {
 			isa = PBXGroup;
 			children = (
+				A68672342609A73A00CF31D1 /* ViewModels */,
 				A68671452608D98A00CF31D1 /* GypChatApp.swift */,
 				A68671472608D98A00CF31D1 /* ContentView.swift */,
 				A68671492608D99100CF31D1 /* Assets.xcassets */,
 				A686714E2608D99100CF31D1 /* Info.plist */,
+				A68671732608DA0300CF31D1 /* GoogleService-Info.plist */,
 				A686714B2608D99100CF31D1 /* Preview Content */,
+				A68671952608DCA400CF31D1 /* AppDelegate.swift */,
+				A6E1287E2609C90900B26760 /* GypChatTests-Bridging-Header.h */,
 			);
 			path = GypChat;
 			sourceTree = "<group>";
@@ -115,7 +153,7 @@
 		A68671562608D99100CF31D1 /* GypChatTests */ = {
 			isa = PBXGroup;
 			children = (
-				A68671572608D99100CF31D1 /* GypChatTests.swift */,
+				A68672612609BBEA00CF31D1 /* ViewModels */,
 				A68671592608D99100CF31D1 /* Info.plist */,
 			);
 			path = GypChatTests;
@@ -130,6 +168,35 @@
 			path = GypChatUITests;
 			sourceTree = "<group>";
 		};
+		A68672342609A73A00CF31D1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A68672592609AA7100CF31D1 /* LoginRegisterViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A68672612609BBEA00CF31D1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A68672632609BC3300CF31D1 /* LoginRegisterViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E77B07C8396C605E5145D67C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D89752DC5453C0D3C5D274B8 /* Pods-GypChat.debug.xcconfig */,
+				253300867BC80B7A5FB9EC5C /* Pods-GypChat.release.xcconfig */,
+				F06719A7EFF5044AF084ADBD /* Pods-GypChat-GypChatUITests.debug.xcconfig */,
+				5C718A0F1B5E4DD558FFA4FD /* Pods-GypChat-GypChatUITests.release.xcconfig */,
+				9CC4713F606DDA9D8849CE4A /* Pods-GypChatTests.debug.xcconfig */,
+				9184F91A2F2B3D3B94B0A014 /* Pods-GypChatTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A68671672608D99200CF31D1 /* Build configuration list for PBXNativeTarget "GypChat" */;
 			buildPhases = (
+				686D0F9782A27CF2F63BC980 /* [CP] Check Pods Manifest.lock */,
 				A686713E2608D98A00CF31D1 /* Sources */,
 				A686713F2608D98A00CF31D1 /* Frameworks */,
 				A68671402608D98A00CF31D1 /* Resources */,
+				79CA0C859887F24638046372 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +223,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A686716A2608D99200CF31D1 /* Build configuration list for PBXNativeTarget "GypChatTests" */;
 			buildPhases = (
+				E5E5B66B56629B2E350564C5 /* [CP] Check Pods Manifest.lock */,
 				A686714F2608D99100CF31D1 /* Sources */,
 				A68671502608D99100CF31D1 /* Frameworks */,
 				A68671512608D99100CF31D1 /* Resources */,
@@ -172,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A686716D2608D99200CF31D1 /* Build configuration list for PBXNativeTarget "GypChatUITests" */;
 			buildPhases = (
+				4EFE558F9666DAFEE087D835 /* [CP] Check Pods Manifest.lock */,
 				A686715A2608D99200CF31D1 /* Sources */,
 				A686715B2608D99200CF31D1 /* Frameworks */,
 				A686715C2608D99200CF31D1 /* Resources */,
+				B74B1C05EE36A80F4DB4E572 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,6 +272,7 @@
 					};
 					A68671522608D99100CF31D1 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 						TestTargetID = A68671412608D98A00CF31D1;
 					};
 					A686715D2608D99200CF31D1 = {
@@ -234,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A686714D2608D99100CF31D1 /* Preview Assets.xcassets in Resources */,
+				A68671742608DA0300CF31D1 /* GoogleService-Info.plist in Resources */,
 				A686714A2608D99100CF31D1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,11 +328,116 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4EFE558F9666DAFEE087D835 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GypChat-GypChatUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		686D0F9782A27CF2F63BC980 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GypChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79CA0C859887F24638046372 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GypChat/Pods-GypChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GypChat/Pods-GypChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GypChat/Pods-GypChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B74B1C05EE36A80F4DB4E572 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GypChat-GypChatUITests/Pods-GypChat-GypChatUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GypChat-GypChatUITests/Pods-GypChat-GypChatUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GypChat-GypChatUITests/Pods-GypChat-GypChatUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5E5B66B56629B2E350564C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GypChatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A686713E2608D98A00CF31D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A68671962608DCA400CF31D1 /* AppDelegate.swift in Sources */,
+				A686725A2609AA7100CF31D1 /* LoginRegisterViewModel.swift in Sources */,
 				A68671482608D98A00CF31D1 /* ContentView.swift in Sources */,
 				A68671462608D98A00CF31D1 /* GypChatApp.swift in Sources */,
 			);
@@ -268,7 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A68671582608D99100CF31D1 /* GypChatTests.swift in Sources */,
+				A68672642609BC3300CF31D1 /* LoginRegisterViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +593,7 @@
 		};
 		A68671682608D99200CF31D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D89752DC5453C0D3C5D274B8 /* Pods-GypChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -436,6 +616,7 @@
 		};
 		A68671692608D99200CF31D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 253300867BC80B7A5FB9EC5C /* Pods-GypChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -458,9 +639,11 @@
 		};
 		A686716B2608D99200CF31D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CC4713F606DDA9D8849CE4A /* Pods-GypChatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59QA58DD23;
 				INFOPLIST_FILE = GypChatTests/Info.plist;
@@ -472,6 +655,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yupenggu.GypChatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GypChat.app/GypChat";
@@ -480,9 +666,11 @@
 		};
 		A686716C2608D99200CF31D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9184F91A2F2B3D3B94B0A014 /* Pods-GypChatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59QA58DD23;
 				INFOPLIST_FILE = GypChatTests/Info.plist;
@@ -494,6 +682,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yupenggu.GypChatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GypChat.app/GypChat";
@@ -502,6 +692,7 @@
 		};
 		A686716E2608D99200CF31D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F06719A7EFF5044AF084ADBD /* Pods-GypChat-GypChatUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -514,6 +705,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yupenggu.GypChatUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = GypChat;
@@ -522,6 +715,7 @@
 		};
 		A686716F2608D99200CF31D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C718A0F1B5E4DD558FFA4FD /* Pods-GypChat-GypChatUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +728,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yupenggu.GypChatUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = GypChat;

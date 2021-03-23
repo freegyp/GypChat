@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct GypChatApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate:AppDelegate
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
