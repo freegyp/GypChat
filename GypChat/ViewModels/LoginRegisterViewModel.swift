@@ -10,7 +10,7 @@ import SwiftUI
 import Firebase
 import ValidationComponents
 
-enum LoginRegViewModelExceptions:Error{
+enum LoginRegExceptions:Error{
     case invalidEmail
     case weakPassword
     case passwordConfirmDismatch
@@ -39,12 +39,12 @@ class LoginRegisterViewModel:ObservableObject{
     func signIn(with email:String,password:String,completion:((Bool,String)->Void)? = nil) throws{
         if !EmailValidationPredicate().evaluate(with: email){
             //Invalid email.
-            throw LoginRegViewModelExceptions.invalidEmail
+            throw LoginRegExceptions.invalidEmail
         }
         
         if password.count < 6{
             //Too weak password.
-            throw LoginRegViewModelExceptions.weakPassword
+            throw LoginRegExceptions.weakPassword
         }
         
         Auth.auth().signIn(withEmail: email, password: password, completion: {(res,err) in
@@ -61,16 +61,16 @@ class LoginRegisterViewModel:ObservableObject{
     func register(with email:String,pwd:String,pwdConfirm:String,completion:((Bool,String)->Void)? = nil) throws{
         if !EmailValidationPredicate().evaluate(with: email){
             //Invalid email.
-            throw LoginRegViewModelExceptions.invalidEmail
+            throw LoginRegExceptions.invalidEmail
         }
         
         if pwd.count < 6{
             //Too weak password.
-            throw LoginRegViewModelExceptions.weakPassword
+            throw LoginRegExceptions.weakPassword
         }
         
         if pwdConfirm != pwd{
-            throw LoginRegViewModelExceptions.passwordConfirmDismatch
+            throw LoginRegExceptions.passwordConfirmDismatch
         }
         
         Auth.auth().createUser(withEmail: email, password: pwd, completion: {(res,err) in
@@ -86,7 +86,7 @@ class LoginRegisterViewModel:ObservableObject{
 }
 
 protocol LoginRegisterViewModelProtocol:AnyObject {
-    var isLoggedIn:Bool{get set}
+    var isLoggedIn:Bool{get}
     func signIn(with email:String,password:String,completion:((Bool,String)->Void)?) throws
     func register(with email:String,pwd:String,pwdConfirm:String,completion:((Bool,String)->Void)?) throws
 }

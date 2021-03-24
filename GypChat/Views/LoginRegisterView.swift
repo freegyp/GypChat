@@ -80,10 +80,10 @@ struct LoginRegisterView<T>: View where T:LoginRegisterViewModelProtocol, T:Obse
                         }
                         inProgress = false
                     })
-                }catch LoginRegViewModelExceptions.invalidEmail{
+                }catch LoginRegExceptions.invalidEmail{
                     emailWarning = "Invalid Email!"
                     inProgress = false
-                }catch LoginRegViewModelExceptions.weakPassword{
+                }catch LoginRegExceptions.weakPassword{
                     pwdWarning = "A valid password should contain at least 6 characters!"
                     inProgress = false
                 }catch{
@@ -164,13 +164,13 @@ struct LoginRegisterView<T>: View where T:LoginRegisterViewModelProtocol, T:Obse
                         }
                         inProgress = false
                     })
-                }catch LoginRegViewModelExceptions.invalidEmail{
+                }catch LoginRegExceptions.invalidEmail{
                     emailWarning = "Invalid Email!"
                     inProgress = false
-                }catch LoginRegViewModelExceptions.weakPassword{
+                }catch LoginRegExceptions.weakPassword{
                     pwdWarning = "A valid password should contain at least 6 characters!"
                     inProgress = false
-                }catch LoginRegViewModelExceptions.passwordConfirmDismatch{
+                }catch LoginRegExceptions.passwordConfirmDismatch{
                     pwdConfirmWarning = "Password confirmation does not match!"
                     inProgress = false
                 }catch{
@@ -232,11 +232,11 @@ class LoginRegisterViewModelMocked:ObservableObject, LoginRegisterViewModelProto
     
     func signIn(with email: String, password: String, completion: ((Bool, String) -> Void)? = nil) throws {
         if !EmailValidationPredicate().evaluate(with: email){
-            throw LoginRegViewModelExceptions.invalidEmail
+            throw LoginRegExceptions.invalidEmail
         }
         
         if password.count < 6{
-            throw LoginRegViewModelExceptions.weakPassword
+            throw LoginRegExceptions.weakPassword
         }
         
         DispatchQueue.global().async {
@@ -251,15 +251,15 @@ class LoginRegisterViewModelMocked:ObservableObject, LoginRegisterViewModelProto
     
     func register(with email: String, pwd: String, pwdConfirm: String, completion: ((Bool, String) -> Void)? = nil) throws {
         if !EmailValidationPredicate().evaluate(with: email){
-            throw LoginRegViewModelExceptions.invalidEmail
+            throw LoginRegExceptions.invalidEmail
         }
         
         if pwd.count < 6{
-            throw LoginRegViewModelExceptions.weakPassword
+            throw LoginRegExceptions.weakPassword
         }
         
         if pwdConfirm != pwd{
-            throw LoginRegViewModelExceptions.passwordConfirmDismatch
+            throw LoginRegExceptions.passwordConfirmDismatch
         }
         
         DispatchQueue.global().async {
