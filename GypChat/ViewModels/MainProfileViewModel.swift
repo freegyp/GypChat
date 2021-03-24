@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Firebase
+import FirebaseStorage
 import ValidationComponents
 
 class MainProfileViewModel: ObservableObject {
@@ -16,7 +17,15 @@ class MainProfileViewModel: ObservableObject {
     @Published var profilePhoto:UIImage = UIImage(systemName: "person")!
     private var photoUrl:URL?{
         didSet{
-            //Do it later.
+            profilePhoto = UIImage(systemName: "person")!
+            if let url = photoUrl{
+                let ref = Storage.storage().reference(forURL: url.absoluteString)
+                ref.getData(maxSize: 64*1024*1024, completion: {[weak self](data,err) in
+                    if let data = data,let img = UIImage(data: data){
+                        self?.profilePhoto = img
+                    }
+                })
+            }
         }
     }
     

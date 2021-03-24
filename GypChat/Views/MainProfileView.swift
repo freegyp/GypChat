@@ -7,6 +7,8 @@
 
 import SwiftUI
 import ValidationComponents
+import FirebaseStorage
+import Firebase
 
 struct MainProfileView<T>: View where T:MainProfileViewModelProtocol, T:ObservableObject{
     @ObservedObject var model:ViewModelMockable<T>
@@ -24,6 +26,9 @@ struct MainProfileView<T>: View where T:MainProfileViewModelProtocol, T:Observab
     @State private var showChangePassword:Bool = false
     @State private var showChangeName:Bool = false
     @State private var showChangeProfilePhoto:Bool = false
+    
+    @State private var showChangeProfilePhotoAlert:Bool = false
+    @State private var changeProfilePhotoAlertMessage:String = ""
     
     @State private var inProgress:Bool = false
     @State private var animating:Bool = false
@@ -99,9 +104,37 @@ struct MainProfileView<T>: View where T:MainProfileViewModelProtocol, T:Observab
                 .padding([.top,.bottom], 15)
         }).fullScreenCover(isPresented: $showChangeProfilePhoto, content: {
             ImagePicker(equalRatio: true, handler: {img in
-                print(img)
+                if let _img = img,let data = _img.jpegData(compressionQuality: 1.0){
+                    let storageRef = Storage.storage().reference()
+                    
+                    let ref = storageRef.child("profile_photos/\(Auth.auth().currentUser!.uid).jpg")
+                    
+                    inProgress = true
+                    let dataTask = ref.putData(data, metadata: nil, completion: {(metadata,err) in
+                        if let err = err{
+                            changeProfilePhotoAlertMessage = err.localizedDescription
+                            showChangeProfilePhotoAlert = true
+                            inProgress = false
+                        }else{
+                            let url = URL(string: "gs://\(ref.bucket)/\(ref.fullPath)")
+                            
+                            model.model.updateProfile(newName: nil, newPhotoUrl: url, completion: {(ok,errInfo) in
+                                if !ok{
+                                    changeProfilePhotoAlertMessage = errInfo
+                                    showChangeProfilePhotoAlert = true
+                                }
+                                inProgress = false
+                            })
+                        }
+                    })
+                    
+                    dataTask.resume()
+                }
+                
                 showChangeProfilePhoto = false
             })
+        }).alert(isPresented: $showChangeProfilePhotoAlert, content: {
+            Alert(title: Text("Image Upload Failed."), message: Text(changeProfilePhotoAlertMessage), dismissButton: .default(Text("Ok.")))
         })
     }
     
