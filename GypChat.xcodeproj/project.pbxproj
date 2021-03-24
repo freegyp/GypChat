@@ -21,6 +21,7 @@
 		A6E12898260A31FF00B26760 /* LoginRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E12897260A31FF00B26760 /* LoginRegisterView.swift */; };
 		A6E128BE260AF50F00B26760 /* MainProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E128BD260AF50F00B26760 /* MainProfileViewModel.swift */; };
 		A6E128C3260B006200B26760 /* MainProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E128C2260B006200B26760 /* MainProfileViewModelTests.swift */; };
+		A6E128C8260B16CA00B26760 /* MainProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E128C7260B16C900B26760 /* MainProfileView.swift */; };
 		B006DA166FE874F80E2EC988 /* Pods_GypChat_GypChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE18949C6BA606A0F5CE36BB /* Pods_GypChat_GypChatUITests.framework */; };
 		E81A3C880E22D4AE7E9C1A30 /* Pods_GypChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7B5F4C155FE121C504B2FF /* Pods_GypChat.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		A6E12897260A31FF00B26760 /* LoginRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterView.swift; sourceTree = "<group>"; };
 		A6E128BD260AF50F00B26760 /* MainProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewModel.swift; sourceTree = "<group>"; };
 		A6E128C2260B006200B26760 /* MainProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewModelTests.swift; sourceTree = "<group>"; };
+		A6E128C7260B16C900B26760 /* MainProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileView.swift; sourceTree = "<group>"; };
 		AA7B5F4C155FE121C504B2FF /* Pods_GypChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GypChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE18949C6BA606A0F5CE36BB /* Pods_GypChat_GypChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GypChat_GypChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89752DC5453C0D3C5D274B8 /* Pods-GypChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GypChat.debug.xcconfig"; path = "Target Support Files/Pods-GypChat/Pods-GypChat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				A6E12897260A31FF00B26760 /* LoginRegisterView.swift */,
+				A6E128C7260B16C900B26760 /* MainProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A68671962608DCA400CF31D1 /* AppDelegate.swift in Sources */,
+				A6E128C8260B16CA00B26760 /* MainProfileView.swift in Sources */,
 				A6E128BE260AF50F00B26760 /* MainProfileViewModel.swift in Sources */,
 				A6E12898260A31FF00B26760 /* LoginRegisterView.swift in Sources */,
 				A6E1288F260A316F00B26760 /* ViewModelMockable.swift in Sources */,

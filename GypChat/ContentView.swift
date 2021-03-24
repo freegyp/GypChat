@@ -10,9 +10,20 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var loginRegModel:ViewModelMockable<LoginRegisterViewModel> = ViewModelMockable(LoginRegisterViewModel())
     
+    @StateObject var mainProfileModel:ViewModelMockable<MainProfileViewModel> = ViewModelMockable(MainProfileViewModel())
+    
     var body: some View {
         if loginRegModel.model.isLoggedIn{
-            Text("Hello, view under construction!")
+            TabView{
+                
+                
+                
+                Group{
+                    MainProfileViewPub(model: mainProfileModel)
+                }.tabItem {
+                    Label("Profile", systemImage: "person.circle")
+                }
+            }
         }else{
             LoginRegisterViewPub(model: loginRegModel)
         }
