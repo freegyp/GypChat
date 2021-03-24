@@ -58,7 +58,7 @@ class LoginRegisterViewModelTests: XCTestCase {
             exp.fulfill()
         }))
         
-        wait(for: [exp], timeout: 1.0)
+        wait(for: [exp], timeout: 2.0)
     }
     
     func test_5_register_with_duplicate_email(){
@@ -72,7 +72,7 @@ class LoginRegisterViewModelTests: XCTestCase {
             exp.fulfill()
         }))
         
-        wait(for: [exp], timeout: 1.0)
+        wait(for: [exp], timeout: 2.0)
     }
     
     func test_5_login_with_invalid_email(){

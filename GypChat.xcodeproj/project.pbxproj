@@ -23,6 +23,10 @@
 		A6E128C3260B006200B26760 /* MainProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E128C2260B006200B26760 /* MainProfileViewModelTests.swift */; };
 		A6E128C8260B16CA00B26760 /* MainProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E128C7260B16C900B26760 /* MainProfileView.swift */; };
 		A6E128CD260B30FE00B26760 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E128CC260B30FE00B26760 /* ImagePicker.swift */; };
+		A6E128DF260B816900B26760 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E128DE260B816900B26760 /* UserProfile.swift */; };
+		A6E128E4260B84B000B26760 /* Friendlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E128E3260B84B000B26760 /* Friendlist.swift */; };
+		A6E128EA260B860E00B26760 /* UserProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E128E9260B860E00B26760 /* UserProfileTests.swift */; };
+		A6E128F2260B8C4A00B26760 /* FriendlistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E128F1260B8C4A00B26760 /* FriendlistTests.swift */; };
 		B006DA166FE874F80E2EC988 /* Pods_GypChat_GypChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE18949C6BA606A0F5CE36BB /* Pods_GypChat_GypChatUITests.framework */; };
 		E81A3C880E22D4AE7E9C1A30 /* Pods_GypChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7B5F4C155FE121C504B2FF /* Pods_GypChat.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +75,10 @@
 		A6E128C2260B006200B26760 /* MainProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewModelTests.swift; sourceTree = "<group>"; };
 		A6E128C7260B16C900B26760 /* MainProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileView.swift; sourceTree = "<group>"; };
 		A6E128CC260B30FE00B26760 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		A6E128DE260B816900B26760 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		A6E128E3260B84B000B26760 /* Friendlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friendlist.swift; sourceTree = "<group>"; };
+		A6E128E9260B860E00B26760 /* UserProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTests.swift; sourceTree = "<group>"; };
+		A6E128F1260B8C4A00B26760 /* FriendlistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendlistTests.swift; sourceTree = "<group>"; };
 		AA7B5F4C155FE121C504B2FF /* Pods_GypChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GypChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE18949C6BA606A0F5CE36BB /* Pods_GypChat_GypChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GypChat_GypChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89752DC5453C0D3C5D274B8 /* Pods-GypChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GypChat.debug.xcconfig"; path = "Target Support Files/Pods-GypChat/Pods-GypChat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +148,7 @@
 		A68671442608D98A00CF31D1 /* GypChat */ = {
 			isa = PBXGroup;
 			children = (
+				A6E128DD260B810100B26760 /* Models */,
 				A6E12893260A31AC00B26760 /* Views */,
 				A68672342609A73A00CF31D1 /* ViewModels */,
 				A68671452608D98A00CF31D1 /* GypChatApp.swift */,
@@ -164,6 +173,7 @@
 		A68671562608D99100CF31D1 /* GypChatTests */ = {
 			isa = PBXGroup;
 			children = (
+				A6E128E8260B85C700B26760 /* Models */,
 				A68672612609BBEA00CF31D1 /* ViewModels */,
 				A68671592608D99100CF31D1 /* Info.plist */,
 			);
@@ -206,6 +216,24 @@
 				A6E128CC260B30FE00B26760 /* ImagePicker.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A6E128DD260B810100B26760 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A6E128DE260B816900B26760 /* UserProfile.swift */,
+				A6E128E3260B84B000B26760 /* Friendlist.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A6E128E8260B85C700B26760 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A6E128E9260B860E00B26760 /* UserProfileTests.swift */,
+				A6E128F1260B8C4A00B26760 /* FriendlistTests.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E77B07C8396C605E5145D67C /* Pods */ = {
@@ -462,9 +490,11 @@
 			files = (
 				A68671962608DCA400CF31D1 /* AppDelegate.swift in Sources */,
 				A6E128C8260B16CA00B26760 /* MainProfileView.swift in Sources */,
+				A6E128DF260B816900B26760 /* UserProfile.swift in Sources */,
 				A6E128BE260AF50F00B26760 /* MainProfileViewModel.swift in Sources */,
 				A6E128CD260B30FE00B26760 /* ImagePicker.swift in Sources */,
 				A6E12898260A31FF00B26760 /* LoginRegisterView.swift in Sources */,
+				A6E128E4260B84B000B26760 /* Friendlist.swift in Sources */,
 				A6E1288F260A316F00B26760 /* ViewModelMockable.swift in Sources */,
 				A686725A2609AA7100CF31D1 /* LoginRegisterViewModel.swift in Sources */,
 				A68671482608D98A00CF31D1 /* ContentView.swift in Sources */,
@@ -476,8 +506,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6E128EA260B860E00B26760 /* UserProfileTests.swift in Sources */,
 				A68672642609BC3300CF31D1 /* LoginRegisterViewModelTests.swift in Sources */,
 				A6E128C3260B006200B26760 /* MainProfileViewModelTests.swift in Sources */,
+				A6E128F2260B8C4A00B26760 /* FriendlistTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
