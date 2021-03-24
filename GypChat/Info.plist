@@ -46,6 +46,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSCameraUsageDescription</key>
+    <string>Profile or message photos.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Profile or message photos.</string>
     <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSExceptionDomains</key>

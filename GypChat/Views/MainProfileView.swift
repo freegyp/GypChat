@@ -23,6 +23,7 @@ struct MainProfileView<T>: View where T:MainProfileViewModelProtocol, T:Observab
     @State private var showChangeEmail:Bool = false
     @State private var showChangePassword:Bool = false
     @State private var showChangeName:Bool = false
+    @State private var showChangeProfilePhoto:Bool = false
     
     @State private var inProgress:Bool = false
     @State private var animating:Bool = false
@@ -90,12 +91,17 @@ struct MainProfileView<T>: View where T:MainProfileViewModelProtocol, T:Observab
     
     var changeProfilePhotoButton: some View{
         Button(action: {
-            
+            showChangeProfilePhoto = true
         }, label: {
             Text("Change Profile Photo")
                 .font(.title)
                 .foregroundColor(.black)
                 .padding([.top,.bottom], 15)
+        }).fullScreenCover(isPresented: $showChangeProfilePhoto, content: {
+            ImagePicker(equalRatio: true, handler: {img in
+                print(img)
+                showChangeProfilePhoto = false
+            })
         })
     }
     
