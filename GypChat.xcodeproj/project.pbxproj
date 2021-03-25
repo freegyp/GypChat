@@ -17,6 +17,7 @@
 		A68671962608DCA400CF31D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68671952608DCA400CF31D1 /* AppDelegate.swift */; };
 		A686725A2609AA7100CF31D1 /* LoginRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68672592609AA7100CF31D1 /* LoginRegisterViewModel.swift */; };
 		A68672642609BC3300CF31D1 /* LoginRegisterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68672632609BC3300CF31D1 /* LoginRegisterViewModelTests.swift */; };
+		A6A4E7EE260CDEE3002463A0 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A4E7ED260CDEE3002463A0 /* ContactsView.swift */; };
 		A6E1288F260A316F00B26760 /* ViewModelMockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E1288E260A316F00B26760 /* ViewModelMockable.swift */; };
 		A6E12898260A31FF00B26760 /* LoginRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E12897260A31FF00B26760 /* LoginRegisterView.swift */; };
 		A6E128BE260AF50F00B26760 /* MainProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E128BD260AF50F00B26760 /* MainProfileViewModel.swift */; };
@@ -74,6 +75,7 @@
 		A68671952608DCA400CF31D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A68672592609AA7100CF31D1 /* LoginRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewModel.swift; sourceTree = "<group>"; };
 		A68672632609BC3300CF31D1 /* LoginRegisterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewModelTests.swift; sourceTree = "<group>"; };
+		A6A4E7ED260CDEE3002463A0 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		A6E1288E260A316F00B26760 /* ViewModelMockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelMockable.swift; sourceTree = "<group>"; };
 		A6E12897260A31FF00B26760 /* LoginRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterView.swift; sourceTree = "<group>"; };
 		A6E128BD260AF50F00B26760 /* MainProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewModel.swift; sourceTree = "<group>"; };
@@ -203,8 +205,8 @@
 		A68672342609A73A00CF31D1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A68672592609AA7100CF31D1 /* LoginRegisterViewModel.swift */,
 				A6E1288E260A316F00B26760 /* ViewModelMockable.swift */,
+				A68672592609AA7100CF31D1 /* LoginRegisterViewModel.swift */,
 				A6E128BD260AF50F00B26760 /* MainProfileViewModel.swift */,
 				A6E128F6260B8E7100B26760 /* ContactsViewModel.swift */,
 			);
@@ -227,6 +229,7 @@
 				A6E12897260A31FF00B26760 /* LoginRegisterView.swift */,
 				A6E128C7260B16C900B26760 /* MainProfileView.swift */,
 				A6E128CC260B30FE00B26760 /* ImagePicker.swift */,
+				A6A4E7ED260CDEE3002463A0 /* ContactsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				A6E12902260BBF4F00B26760 /* Functions+globalFunctions.swift in Sources */,
 				A6E128DF260B816900B26760 /* UserProfile.swift in Sources */,
 				A6E128BE260AF50F00B26760 /* MainProfileViewModel.swift in Sources */,
+				A6A4E7EE260CDEE3002463A0 /* ContactsView.swift in Sources */,
 				A6E128CD260B30FE00B26760 /* ImagePicker.swift in Sources */,
 				A6E12898260A31FF00B26760 /* LoginRegisterView.swift in Sources */,
 				A6E128E4260B84B000B26760 /* Friendlist.swift in Sources */,

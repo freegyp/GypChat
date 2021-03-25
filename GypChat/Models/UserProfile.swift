@@ -8,7 +8,8 @@
 import Foundation
 import ValidationComponents
 
-struct UserProfile: Codable{
+struct UserProfile: Codable, Equatable, Identifiable{
+    var id: String {uid}
     var uid:String
     var email:String?
     var displayName:String?
@@ -31,6 +32,10 @@ struct UserProfile: Codable{
         if let url = photoURL{
             self.photoURL = url
         }
+    }
+    
+    static func ==(l:UserProfile, r:UserProfile) -> Bool{
+        return l.uid == r.uid
     }
     
     enum CodingKeys:String,CodingKey {

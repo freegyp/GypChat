@@ -12,11 +12,17 @@ struct ContentView: View {
     
     @StateObject var mainProfileModel:ViewModelMockable<MainProfileViewModel> = ViewModelMockable(MainProfileViewModel())
     
+    @StateObject var contactsModel:ViewModelMockable<ContactsViewModel> = ViewModelMockable(ContactsViewModel())
+    
     var body: some View {
         if loginRegModel.model.isLoggedIn{
             TabView{
                 
-                
+                Group{
+                    ContactsViewPub(model: contactsModel)
+                }.tabItem {
+                    Label("Contacts", systemImage: "list.bullet")
+                }
                 
                 Group{
                     MainProfileViewPub(model: mainProfileModel)

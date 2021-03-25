@@ -19,8 +19,8 @@ enum ViewModelsExceptions:Error {
 
 class ContactsViewModel: ObservableObject{
     
-    @Published var friendProfiles:[UserProfile] = []
-    @Published var profilePics:[String:UIImage] = [:]
+    @Published private(set) var friendProfiles:[UserProfile] = []
+    @Published private(set) var profilePics:[String:UIImage] = [:]
     
     private var authHandle:AuthStateDidChangeListenerHandle?
     private var contactsListener:ListenerRegistration?
@@ -32,14 +32,9 @@ class ContactsViewModel: ObservableObject{
                     self?.friendProfiles = profs
                     self?.profilePics = [:]
                     for prof in profs{
-                        if let url = prof.photoURL{
-                            let ref = Storage.storage().reference(forURL: url.absoluteString)
-                            ref.getData(maxSize: 64*1024*1024, completion: {(data,err) in
-                                if let data = data,let img = UIImage(data: data){
-                                    self?.profilePics[prof.uid] = img
-                                }
-                            })
-                        }
+                        self?.fetchProfileImage(prof, completion: {(img,errInfo) in
+                            self?.profilePics[prof.uid] = img
+                        })
                     }
                 })
             }else{
@@ -82,6 +77,28 @@ class ContactsViewModel: ObservableObject{
         if let listener = contactsListener{
             listener.remove()
         }
+    }
+    
+    func fetchProfileImage(_ userProf:UserProfile,completion:((UIImage?,String)->Void)? = nil){
+        guard let url = userProf.photoURL else{
+            if let completion = completion{
+                completion(nil,"")
+            }
+            return
+        }
+        
+        let ref = Storage.storage().reference(forURL: url.absoluteString)
+        ref.getData(maxSize: 64*1024*1024, completion: {(data,err) in
+            if let completion = completion{
+                if let err = err{
+                    completion(nil,err.localizedDescription)
+                }else if let data = data,let img = UIImage(data: data){
+                    completion(img,"")
+                }else{
+                    completion(nil,"Failed to decode image data!")
+                }
+            }
+        })
     }
     
     func addContact(_ userProf:UserProfile,completion:((Bool,String)->Void)? = nil) throws{
@@ -183,6 +200,15 @@ class ContactsViewModel: ObservableObject{
             }
         })
     }
-    
-    
 }
+
+protocol ContactsViewModelProtocol:AnyObject {
+    var friendProfiles:[UserProfile] {get}
+    var profilePics:[String:UIImage] {get}
+    func addContact(_ userProf:UserProfile,completion:((Bool,String)->Void)?) throws
+    func removeContact(_ userProf:UserProfile,completion:((Bool,String)->Void)?) throws
+    func searchUser(by email:String,completion:((UserProfile?,String)->Void)?) throws
+    func fetchProfileImage(_ userProf:UserProfile,completion:((UIImage?,String)->Void)?)
+}
+
+extension ContactsViewModel:ContactsViewModelProtocol {}
