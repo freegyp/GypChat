@@ -56,3 +56,8 @@ struct UserProfile: Codable{
         photoURL = try? values.decode(URL.self, forKey: .photoURL)
     }
 }
+
+struct ProfilesQueryResult: Codable{
+    var found:[UserProfile]
+    var notFound:[String]
+}

@@ -22,7 +22,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             settings.isSSLEnabled = false
             Firestore.firestore().settings = settings
             Auth.auth().useEmulator(withHost:"localhost", port:9099)
-            Functions.functions().useFunctionsEmulator(origin: "http://localhost:5001")
         }
         
         return true

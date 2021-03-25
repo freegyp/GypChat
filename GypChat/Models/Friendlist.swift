@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct Friendlist:Codable {
+struct Friendlist:Codable,Equatable {
     var uid:String
     var friendIDs:[String] = []
     
     mutating func addFriend(_ friend_id:String){
-        guard !friendIDs.contains(friend_id),friend_id != uid else{
+        guard friendIDs.count < 100,!friendIDs.contains(friend_id),friend_id != uid else{
             return
         }
         
@@ -23,5 +23,9 @@ struct Friendlist:Codable {
         friendIDs.removeAll(where: {_id in
             _id == friend_id
         })
+    }
+    
+    static func ==(l:Friendlist, r:Friendlist) -> Bool{
+        return l.uid == r.uid && l.friendIDs == r.friendIDs
     }
 }
