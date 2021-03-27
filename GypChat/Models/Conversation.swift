@@ -12,7 +12,11 @@ enum ConversationExceptions:Error {
     case duplicatePartyConversation
 }
 
-struct Conversation: Codable{
+struct Conversation: Codable, Identifiable{
+    var id:String{
+        let _ids = user_IDs.sorted()
+        return "\(_ids[0])_\(_ids[1])"
+    }
     var user_IDs:[String]
     var lastUpdateTime:Date
     var lastMessage:Message?

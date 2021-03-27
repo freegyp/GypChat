@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		16F32389D387041C51DBE794 /* Pods_GypChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F379F24FFFAC75C1C950E6 /* Pods_GypChatTests.framework */; };
 		A617D108260F71A10049C9DB /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A617D107260F71A10049C9DB /* MessageView.swift */; };
+		A617D10D260F97020049C9DB /* ConversationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A617D10C260F97020049C9DB /* ConversationListViewModel.swift */; };
 		A68671462608D98A00CF31D1 /* GypChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68671452608D98A00CF31D1 /* GypChatApp.swift */; };
 		A68671482608D98A00CF31D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68671472608D98A00CF31D1 /* ContentView.swift */; };
 		A686714A2608D99100CF31D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A68671492608D99100CF31D1 /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		9CC4713F606DDA9D8849CE4A /* Pods-GypChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GypChatTests.debug.xcconfig"; path = "Target Support Files/Pods-GypChatTests/Pods-GypChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4F379F24FFFAC75C1C950E6 /* Pods_GypChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GypChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A617D107260F71A10049C9DB /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		A617D10C260F97020049C9DB /* ConversationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationListViewModel.swift; sourceTree = "<group>"; };
 		A68671422608D98A00CF31D1 /* GypChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GypChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A68671452608D98A00CF31D1 /* GypChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GypChatApp.swift; sourceTree = "<group>"; };
 		A68671472608D98A00CF31D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				A6E128BD260AF50F00B26760 /* MainProfileViewModel.swift */,
 				A6E128F6260B8E7100B26760 /* ContactsViewModel.swift */,
 				A6A4E806260E2062002463A0 /* ConversationViewModel.swift */,
+				A617D10C260F97020049C9DB /* ConversationListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				A6E1290C260C4DB000B26760 /* Date+getFormattedDate.swift in Sources */,
 				A6A4E7F8260DC400002463A0 /* Message.swift in Sources */,
 				A6E128C8260B16CA00B26760 /* MainProfileView.swift in Sources */,
+				A617D10D260F97020049C9DB /* ConversationListViewModel.swift in Sources */,
 				A6E12902260BBF4F00B26760 /* Functions+globalFunctions.swift in Sources */,
 				A6E128DF260B816900B26760 /* UserProfile.swift in Sources */,
 				A6E128BE260AF50F00B26760 /* MainProfileViewModel.swift in Sources */,

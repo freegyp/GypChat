@@ -48,7 +48,7 @@ class ContactsViewModel: ObservableObject{
         if let user = Auth.auth().currentUser{
             contacts = Friendlist(uid: user.uid)
             let ref = Firestore.firestore().collection("Contacts").document(user.uid)
-            ref.addSnapshotListener({[weak self](snapshot,err) in
+            contactsListener = ref.addSnapshotListener({[weak self](snapshot,err) in
                 if let data = snapshot?.data(),let friendlist = try? FirestoreDecoder().decode(Friendlist.self, from: data){
                     self?.contacts = friendlist
                 }
@@ -63,7 +63,7 @@ class ContactsViewModel: ObservableObject{
             if let user = user{
                 self?.contacts = Friendlist(uid: user.uid)
                 let ref = Firestore.firestore().collection("Contacts").document(user.uid)
-                ref.addSnapshotListener({(snapshot,err) in
+                self?.contactsListener = ref.addSnapshotListener({(snapshot,err) in
                     if let data = snapshot?.data(),let friendlist = try? FirestoreDecoder().decode(Friendlist.self, from: data){
                         self?.contacts = friendlist
                     }

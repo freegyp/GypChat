@@ -107,7 +107,7 @@ struct MainProfileView<T>: View where T:MainProfileViewModelProtocol, T:Observab
                 if let _img = img,let data = _img.jpegData(compressionQuality: 1.0){
                     let storageRef = Storage.storage().reference()
                     
-                    let ref = storageRef.child("profile_photos/\(Auth.auth().currentUser!.uid).jpg")
+                    let ref = storageRef.child("profile_photos/\(Auth.auth().currentUser!.uid)/\(Auth.auth().currentUser!.uid).jpg")
                     
                     inProgress = true
                     let dataTask = ref.putData(data, metadata: nil, completion: {(metadata,err) in
