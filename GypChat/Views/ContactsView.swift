@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ContactsView<T>: View where T:ObservableObject, T:ContactsViewModelProtocol{
     @ObservedObject var model:ViewModelMockable<T>
@@ -40,26 +41,34 @@ struct ContactsView<T>: View where T:ObservableObject, T:ContactsViewModelProtoc
         }
     }
     
+    private func conversationPath(_ prof:UserProfile) -> String{
+        let user_id = Auth.auth().currentUser!.uid, other_id = prof.uid
+        let conv = try! Conversation(user_ids: [user_id,other_id])
+        return conv.docPath
+    }
+    
     var body: some View {
         ZStack{
             NavigationView{
                 List{
                     ForEach(model.model.friendProfiles, content: { prof in
-                        HStack{
-                            Image(uiImage: model.model.profilePics[prof.uid] ?? UIImage(systemName: "person")!)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 36)
-                                .cornerRadius(18)
-                            VStack{
-                                Text(prof.displayName ?? "")
-                                    .font(.title3)
-                                    .foregroundColor(.black)
-                                Text(prof.email ?? "")
-                                    .font(.body)
-                                    .foregroundColor(.black)
-                            }
-                        }.padding(.all, 12)
+                        Link(destination: URL(string: "gypchat://conversations/\(conversationPath(prof))")!){
+                            HStack{
+                                Image(uiImage: model.model.profilePics[prof.uid] ?? UIImage(systemName: "person")!)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 48)
+                                    .cornerRadius(24)
+                                VStack(alignment:.leading,spacing:10){
+                                    Text(prof.displayName ?? "")
+                                        .font(.title3)
+                                        .foregroundColor(.purple)
+                                    Text(prof.email ?? "")
+                                        .font(.body)
+                                        .foregroundColor(.black)
+                                }
+                            }.padding(.all, 12)
+                        }
                     }).onDelete(perform: { indexSet in
                         let profDel = model.model.friendProfiles[indexSet.first!]
                         do{
@@ -117,15 +126,15 @@ struct ContactsView<T>: View where T:ObservableObject, T:ContactsViewModelProtoc
                                                     .aspectRatio(contentMode: .fit)
                                                     .frame(width: 56)
                                                     .cornerRadius(28)
-                                                VStack{
+                                                VStack(alignment:.leading,spacing:10){
                                                     Text(searchedProfile?.displayName ?? "")
-                                                        .font(.title)
-                                                        .foregroundColor(.black)
-                                                    Text(searchedProfile?.email ?? "")
                                                         .font(.title3)
+                                                        .foregroundColor(.purple)
+                                                    Text(searchedProfile?.email ?? "")
+                                                        .font(.body)
                                                         .foregroundColor(.black)
                                                 }
-                                            }
+                                            }.padding(.all,10)
                                             Spacer()
                                             Button(action:{
                                                 do{
@@ -206,9 +215,9 @@ struct ContactsView<T>: View where T:ObservableObject, T:ContactsViewModelProtoc
 
 class ContactsViewModelMocked: ObservableObject,ContactsViewModelProtocol{
     
-    var friendProfiles: [UserProfile] = []
+    @Published var friendProfiles: [UserProfile] = []
     
-    var profilePics: [String : UIImage] = [:]
+    @Published var profilePics: [String : UIImage] = [:]
     
     private var allProfiles: [UserProfile] = []
     private var simExceptions:Bool = false

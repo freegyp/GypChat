@@ -278,11 +278,13 @@ struct MainProfileView<T>: View where T:MainProfileViewModelProtocol, T:Observab
                             .frame(width: 72)
                             .cornerRadius(36)
                             
-                        VStack{
+                        VStack(alignment:.leading,spacing:10){
                             Text(model.model.dispName)
                                 .font(.largeTitle)
+                                .foregroundColor(.purple)
                             Text(model.model.email)
                                 .font(.title3)
+                                .foregroundColor(.black)
                         }
                     }.padding([.top,.bottom,.leading], 15)
                 }
@@ -310,13 +312,11 @@ struct MainProfileView<T>: View where T:MainProfileViewModelProtocol, T:Observab
 }
 
 class MainProfileViewModelMocked:ObservableObject, MainProfileViewModelProtocol{
-    var email: String = "abc@xyz.com"
+    @Published var email: String = "abc@xyz.com"
     
-    var dispName: String = "ABC"
+    @Published var dispName: String = "ABC"
     
-    var profilePhoto: UIImage{
-        UIImage(systemName: "person")!
-    }
+    @Published var profilePhoto: UIImage = UIImage(systemName: "person")!
     
     func signOut() {
         

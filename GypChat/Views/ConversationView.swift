@@ -104,6 +104,7 @@ struct ConversationView<T>: View where T:ObservableObject, T:ConversationViewMod
                                         isCurrentUser: msg.sender_id == model.model.user_id,
                                         text: msg.text,
                                         image: (msg.imageURL == nil ? nil : (model.model.msgImage[msg.imageURL!.absoluteString] ?? UIImage(named: "image_placeholder")!)))
+                                .padding([.bottom],15)
                         })
                         .onAppear{
                             if let bottom = model.model.messages.last{
@@ -155,7 +156,7 @@ struct ConversationView<T>: View where T:ObservableObject, T:ConversationViewMod
                     }, label: {
                         Text("Send")
                     })
-                }.padding([.leading,.trailing], 10)
+                }.padding(.all, 15)
             }.alert(isPresented: $showAlert, content: {
                 Alert(title: Text("Error"), message: Text(alertWarning), dismissButton: .cancel())
             })
@@ -211,7 +212,9 @@ class ConversationViewModelMocked: ObservableObject, ConversationViewModelProtoc
 
 fileprivate struct ConversationViewPreview: View{
     var body: some View{
-        ConversationViewDev(model: ViewModelMockable(ConversationViewModelMocked()))
+        NavigationView{
+            ConversationViewDev(model: ViewModelMockable(ConversationViewModelMocked()))
+        }
     }
 }
 

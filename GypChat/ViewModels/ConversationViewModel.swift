@@ -40,6 +40,9 @@ class ConversationViewModel: ObservableObject{
         self.convPath = convPath
         self.user_IDs = convPath.split(separator: "_").map({String($0)})
         
+        print(self.convPath)
+        print(self.user_IDs)
+        
         if self.user_IDs.count != 2{
             throw ConversationExceptions.notTwoPartyConversation
         }
