@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Message:Codable {
+struct Message:Codable, Identifiable, Equatable {
+    var id: String {msg_id}
     var msg_id:String
     var sender_id:String
     var receiver_id:String
@@ -19,6 +20,10 @@ struct Message:Codable {
         self.sender_id = sender_id
         self.receiver_id = receiver_id
         msg_id = String.uuid
+    }
+    
+    static func ==(l:Message, r:Message) -> Bool{
+        return l.msg_id == r.msg_id
     }
     
     enum CodingKeys: String, CodingKey {

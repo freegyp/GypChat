@@ -20,7 +20,16 @@ class ConversationViewModel: ObservableObject{
     @Published var profilePhoto:[String:UIImage] = [:]
     @Published var msgImage:[String:UIImage] = [:]
     
-    private var convPath:String
+    var other_id:String?{
+        for _id in user_IDs{
+            if _id != user_id{
+                return _id
+            }
+        }
+        return nil
+    }
+    
+    private(set) var convPath:String
     private var user_IDs:[String]
     private var page_size:Int = 10
     
@@ -125,8 +134,10 @@ class ConversationViewModel: ObservableObject{
 }
 
 protocol ConversationViewModelProtocol: AnyObject {
+    var convPath:String {get}
     var messages:[Message] {get}
     var user_id:String? {get}
+    var other_id:String? {get}
     var profilePhoto:[String:UIImage] {get}
     var msgImage:[String:UIImage] {get}
     func sendMessage(_ msg:Message,completion:((Bool,String)->Void)?) throws

@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Phantom-of-Baker-Street-detective-conan-1136761_800_600.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

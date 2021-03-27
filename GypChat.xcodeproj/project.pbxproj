@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		16F32389D387041C51DBE794 /* Pods_GypChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F379F24FFFAC75C1C950E6 /* Pods_GypChatTests.framework */; };
+		A617D108260F71A10049C9DB /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A617D107260F71A10049C9DB /* MessageView.swift */; };
 		A68671462608D98A00CF31D1 /* GypChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68671452608D98A00CF31D1 /* GypChatApp.swift */; };
 		A68671482608D98A00CF31D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68671472608D98A00CF31D1 /* ContentView.swift */; };
 		A686714A2608D99100CF31D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A68671492608D99100CF31D1 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		A6A4E802260DD441002463A0 /* ConversationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A4E801260DD441002463A0 /* ConversationTests.swift */; };
 		A6A4E807260E2062002463A0 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A4E806260E2062002463A0 /* ConversationViewModel.swift */; };
 		A6A4E80C260E2B25002463A0 /* ConversationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A4E80B260E2B24002463A0 /* ConversationViewModelTests.swift */; };
+		A6A4E811260F0926002463A0 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A4E810260F0926002463A0 /* ConversationView.swift */; };
 		A6E1288F260A316F00B26760 /* ViewModelMockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E1288E260A316F00B26760 /* ViewModelMockable.swift */; };
 		A6E12898260A31FF00B26760 /* LoginRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E12897260A31FF00B26760 /* LoginRegisterView.swift */; };
 		A6E128BE260AF50F00B26760 /* MainProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E128BD260AF50F00B26760 /* MainProfileViewModel.swift */; };
@@ -66,6 +68,7 @@
 		9184F91A2F2B3D3B94B0A014 /* Pods-GypChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GypChatTests.release.xcconfig"; path = "Target Support Files/Pods-GypChatTests/Pods-GypChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		9CC4713F606DDA9D8849CE4A /* Pods-GypChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GypChatTests.debug.xcconfig"; path = "Target Support Files/Pods-GypChatTests/Pods-GypChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4F379F24FFFAC75C1C950E6 /* Pods_GypChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GypChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A617D107260F71A10049C9DB /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		A68671422608D98A00CF31D1 /* GypChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GypChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A68671452608D98A00CF31D1 /* GypChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GypChatApp.swift; sourceTree = "<group>"; };
 		A68671472608D98A00CF31D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 		A6A4E801260DD441002463A0 /* ConversationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTests.swift; sourceTree = "<group>"; };
 		A6A4E806260E2062002463A0 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
 		A6A4E80B260E2B24002463A0 /* ConversationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModelTests.swift; sourceTree = "<group>"; };
+		A6A4E810260F0926002463A0 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		A6E1288E260A316F00B26760 /* ViewModelMockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelMockable.swift; sourceTree = "<group>"; };
 		A6E12897260A31FF00B26760 /* LoginRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterView.swift; sourceTree = "<group>"; };
 		A6E128BD260AF50F00B26760 /* MainProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewModel.swift; sourceTree = "<group>"; };
@@ -237,13 +241,23 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		A6A4E815260F0B38002463A0 /* UnitViews */ = {
+			isa = PBXGroup;
+			children = (
+				A617D107260F71A10049C9DB /* MessageView.swift */,
+			);
+			path = UnitViews;
+			sourceTree = "<group>";
+		};
 		A6E12893260A31AC00B26760 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A6A4E815260F0B38002463A0 /* UnitViews */,
 				A6E12897260A31FF00B26760 /* LoginRegisterView.swift */,
 				A6E128C7260B16C900B26760 /* MainProfileView.swift */,
 				A6E128CC260B30FE00B26760 /* ImagePicker.swift */,
 				A6A4E7ED260CDEE3002463A0 /* ContactsView.swift */,
+				A6A4E810260F0926002463A0 /* ConversationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -544,6 +558,7 @@
 				A6E128CD260B30FE00B26760 /* ImagePicker.swift in Sources */,
 				A6E12898260A31FF00B26760 /* LoginRegisterView.swift in Sources */,
 				A6E128E4260B84B000B26760 /* Friendlist.swift in Sources */,
+				A617D108260F71A10049C9DB /* MessageView.swift in Sources */,
 				A6A4E7F3260DC311002463A0 /* Conversation.swift in Sources */,
 				A6E12907260C4D7700B26760 /* String+uuid.swift in Sources */,
 				A6E1288F260A316F00B26760 /* ViewModelMockable.swift in Sources */,
@@ -551,6 +566,7 @@
 				A68671482608D98A00CF31D1 /* ContentView.swift in Sources */,
 				A6A4E807260E2062002463A0 /* ConversationViewModel.swift in Sources */,
 				A68671462608D98A00CF31D1 /* GypChatApp.swift in Sources */,
+				A6A4E811260F0926002463A0 /* ConversationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
