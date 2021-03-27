@@ -19,7 +19,7 @@ class ConversationTests: XCTestCase {
         
         XCTAssertNotNil(conversation)
         
-        var msg = Message(user_id: "1234567")
+        var msg = Message(sender_id: "1234567",receiver_id:"2345678")
         msg.text = "This is a test message."
         conversation?.lastMessage = msg
         
@@ -29,7 +29,9 @@ class ConversationTests: XCTestCase {
     func test_2_conversation_encode(){
         let data:[String:Any] = ["user_IDs":["1234567","2345678"],
                                  "lastUpdateTime":Int(Date().timeIntervalSince1970),
-                                 "lastMessage":["user_id":"1234567",
+                                 "lastMessage":["msg_id":String.uuid,
+                                                "sender_id":"1234567",
+                                                "receiver_id":"2345678",
                                                 "date":Int(Date().timeIntervalSince1970),
                                                 "text":"This is a test message.",
                                                 "imageURL":"https://google.com"]]

@@ -22,6 +22,8 @@
 		A6A4E7F8260DC400002463A0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A4E7F7260DC400002463A0 /* Message.swift */; };
 		A6A4E7FD260DD19F002463A0 /* MessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A4E7FC260DD19F002463A0 /* MessageTests.swift */; };
 		A6A4E802260DD441002463A0 /* ConversationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A4E801260DD441002463A0 /* ConversationTests.swift */; };
+		A6A4E807260E2062002463A0 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A4E806260E2062002463A0 /* ConversationViewModel.swift */; };
+		A6A4E80C260E2B25002463A0 /* ConversationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A4E80B260E2B24002463A0 /* ConversationViewModelTests.swift */; };
 		A6E1288F260A316F00B26760 /* ViewModelMockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E1288E260A316F00B26760 /* ViewModelMockable.swift */; };
 		A6E12898260A31FF00B26760 /* LoginRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E12897260A31FF00B26760 /* LoginRegisterView.swift */; };
 		A6E128BE260AF50F00B26760 /* MainProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E128BD260AF50F00B26760 /* MainProfileViewModel.swift */; };
@@ -84,6 +86,8 @@
 		A6A4E7F7260DC400002463A0 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A6A4E7FC260DD19F002463A0 /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
 		A6A4E801260DD441002463A0 /* ConversationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTests.swift; sourceTree = "<group>"; };
+		A6A4E806260E2062002463A0 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
+		A6A4E80B260E2B24002463A0 /* ConversationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModelTests.swift; sourceTree = "<group>"; };
 		A6E1288E260A316F00B26760 /* ViewModelMockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelMockable.swift; sourceTree = "<group>"; };
 		A6E12897260A31FF00B26760 /* LoginRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterView.swift; sourceTree = "<group>"; };
 		A6E128BD260AF50F00B26760 /* MainProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewModel.swift; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 				A68672592609AA7100CF31D1 /* LoginRegisterViewModel.swift */,
 				A6E128BD260AF50F00B26760 /* MainProfileViewModel.swift */,
 				A6E128F6260B8E7100B26760 /* ContactsViewModel.swift */,
+				A6A4E806260E2062002463A0 /* ConversationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 				A68672632609BC3300CF31D1 /* LoginRegisterViewModelTests.swift */,
 				A6E128C2260B006200B26760 /* MainProfileViewModelTests.swift */,
 				A6E128FB260B91F000B26760 /* ContactsViewModelTests.swift */,
+				A6A4E80B260E2B24002463A0 /* ConversationViewModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -543,6 +549,7 @@
 				A6E1288F260A316F00B26760 /* ViewModelMockable.swift in Sources */,
 				A686725A2609AA7100CF31D1 /* LoginRegisterViewModel.swift in Sources */,
 				A68671482608D98A00CF31D1 /* ContentView.swift in Sources */,
+				A6A4E807260E2062002463A0 /* ConversationViewModel.swift in Sources */,
 				A68671462608D98A00CF31D1 /* GypChatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +560,7 @@
 			files = (
 				A6A4E802260DD441002463A0 /* ConversationTests.swift in Sources */,
 				A6E128EA260B860E00B26760 /* UserProfileTests.swift in Sources */,
+				A6A4E80C260E2B25002463A0 /* ConversationViewModelTests.swift in Sources */,
 				A6A4E7FD260DD19F002463A0 /* MessageTests.swift in Sources */,
 				A68672642609BC3300CF31D1 /* LoginRegisterViewModelTests.swift in Sources */,
 				A6E128C3260B006200B26760 /* MainProfileViewModelTests.swift in Sources */,

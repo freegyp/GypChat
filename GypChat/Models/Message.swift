@@ -8,17 +8,23 @@
 import Foundation
 
 struct Message:Codable {
-    var user_id:String
+    var msg_id:String
+    var sender_id:String
+    var receiver_id:String
     var date:Date = Date()
     var text:String = ""
     var imageURL:URL?
     
-    init(user_id:String) {
-        self.user_id = user_id
+    init(sender_id:String,receiver_id:String) {
+        self.sender_id = sender_id
+        self.receiver_id = receiver_id
+        msg_id = String.uuid
     }
     
     enum CodingKeys: String, CodingKey {
-        case user_id
+        case msg_id
+        case sender_id
+        case receiver_id
         case date
         case text
         case imageURL
@@ -27,7 +33,11 @@ struct Message:Codable {
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         
-        try container.encode(user_id, forKey: .user_id)
+        try container.encode(msg_id, forKey: .msg_id)
+        
+        try container.encode(sender_id, forKey: .sender_id)
+        
+        try container.encode(receiver_id, forKey: .receiver_id)
         
         let _date:Int = Int(date.timeIntervalSince1970)
         
@@ -43,7 +53,11 @@ struct Message:Codable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
-        user_id = try values.decode(String.self, forKey: .user_id)
+        msg_id = try values.decode(String.self, forKey: .msg_id)
+        
+        sender_id = try values.decode(String.self, forKey: .sender_id)
+        
+        receiver_id = try values.decode(String.self, forKey: .receiver_id)
         
         let _date = try values.decode(Int.self, forKey: .date)
         
@@ -51,6 +65,6 @@ struct Message:Codable {
         
         text = try values.decode(String.self, forKey: .text)
         
-        imageURL = try values.decode(URL.self, forKey: .imageURL)
+        imageURL = try? values.decode(URL.self, forKey: .imageURL)
     }
 }
